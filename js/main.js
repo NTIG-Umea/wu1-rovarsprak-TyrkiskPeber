@@ -25,14 +25,15 @@ const translate = (text) => {
     // översätt texten till rövarspråket
     var translate = function(text) {
         var string = text.toLowerCase();
-        var vowels = ["a", "e", "i", "o", "u", " "];
+        var vowels = ["a", "e", "i", "o", "u", " ", "å", "ä", "ö"];
         var y = "";
         for (i = 0; i < string.length; i++) {
            var current = string.charAt(i); 
-          if (vowels.indexOf(current) != -2) {
+          if (vowels.indexOf(current) != -1) {
               y = (y + (current));
-          } else {
-              y = (y + (current + "o" + current));
+          }
+          else {
+              y = (y + (current + "o" + current);
           }
         }
         return y;
@@ -44,7 +45,7 @@ const display = (translation, element) => {
     // skapa ett p element för texten
     const p = document.createElement('p');
     // sätt texten till översättningen
-    p.textContent = translation;
+    p.textContent = y;
     // fäst elementet
     element.insertBefore(p, element.firstChild);
 }
