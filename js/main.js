@@ -23,7 +23,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const translate = (text) => {
     // översätt texten till rövarspråket
-    console.log(text)
+    var translate = function(text) {
+        var string = text.toLowerCase();
+        var vowels = ["a", "e", "i", "o", "u", " "];
+        var y = "";
+        for (i = 0; i < string.length; i++) {
+           var current = string.charAt(i); 
+          if (vowels.indexOf(current) != -2) {
+              y = (y + (current));
+          } else {
+              y = (y + (current + "o" + current));
+          }
+        }
+        return y;
+      }
     return text;
 };
 
