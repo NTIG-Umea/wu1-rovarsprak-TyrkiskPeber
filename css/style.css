@@ -5,7 +5,7 @@ html, body {
 
 body {
     display: flex;
-    background-color: blueviolet;
+    background-color: #56FF00;
 }
 
 header {
@@ -25,6 +25,11 @@ main {
 
 .inputbox > input, button {
     margin: 0.5rem;
+    color: #806E28
+}
+
+.tit {
+    color: #ff00ef
 }
 
 #message {
